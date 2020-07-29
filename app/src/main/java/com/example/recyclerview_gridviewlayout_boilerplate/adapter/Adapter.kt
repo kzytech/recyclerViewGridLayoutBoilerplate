@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.recyclerview_gridviewlayout_boilerplate.R
 import com.example.recyclerview_gridviewlayout_boilerplate.model.DataList
 
-class AlphaAdapter (var context: Context,var arrayList: ArrayList<DataList>) : RecyclerView.Adapter<AlphaAdapter.ItemHolder>() {
+class Adapter (var context: Context, var arrayList: ArrayList<DataList>) : RecyclerView.Adapter<Adapter.ItemHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemHolder {
         val itemHolder = LayoutInflater.from(parent.context).inflate(R.layout.list_item, parent, false)

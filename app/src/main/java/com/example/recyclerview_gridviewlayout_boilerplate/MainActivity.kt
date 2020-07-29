@@ -3,9 +3,8 @@ package com.example.recyclerview_gridviewlayout_boilerplate
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.recyclerview_gridviewlayout_boilerplate.adapter.AlphaAdapter
+import com.example.recyclerview_gridviewlayout_boilerplate.adapter.Adapter
 import com.example.recyclerview_gridviewlayout_boilerplate.model.DataList
 
 class MainActivity : AppCompatActivity() {
@@ -13,7 +12,7 @@ class MainActivity : AppCompatActivity() {
     private var recyclerView:RecyclerView ? = null
     private var gridLayoutManager:GridLayoutManager ? = null
     private var arrayList: ArrayList<DataList> ? = null
-    private var alphaAdapter:AlphaAdapter ? = null
+    private var adapter:Adapter ? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,8 +23,8 @@ class MainActivity : AppCompatActivity() {
         recyclerView?.setHasFixedSize(true)
         arrayList = ArrayList()
         arrayList = setDataList()
-        alphaAdapter = AlphaAdapter(applicationContext,arrayList!!)
-        recyclerView?.adapter = alphaAdapter
+        adapter = Adapter(applicationContext,arrayList!!)
+        recyclerView?.adapter = adapter
     }
 
     private fun setDataList(): ArrayList<DataList> {
